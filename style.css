@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+body {
+    font-size: 10px;
+    background-color: rgb(23, 19, 27);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    min-width: 30rem;
+    background-color: rgb(23, 19, 27);
+}
+
+h1 {
+    padding: 30px;
+    font-size: 3rem;
+    color: white;
+}
+
+
+/* input section */
+.frame {
+    margin: .5rem 2rem;
+    width: 60vw;
+    min-width: 30rem;
+    background-color: rgb(23, 19, 27);
+}
+
+.border {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem 0;
+    height: 8rem;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
+    border-radius: 25px;
+}
+
+.input {
+    padding: 4px;
+    width: 50%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px white solid;
+    outline: none;
+}
+
+.add {
+    margin: 0 1rem;
+    padding: 0 1rem;
+    color: white;
+    border: 1px white solid;
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.add:hover {
+    color: rgb(23, 19, 27);
+    background-color: white;
+}
+
+.stop {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 1.2rem;
+    color: rgb(182, 86, 86);
+
+}
+
+/* tasks section */
+.empty {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 1.5rem;
+    color: rgb(104, 216, 156);
+}
+
+
+.tasks {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    min-height: 20rem;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
+    border-radius: 25px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    min-height: 1rem;
+    width: 90%;
+    color: white;
+    background-color: rgb(45, 37, 53);
+}
+
+.hidden {
+    display: none;
+}
+
+.task * {
+    padding: 0 1rem;
+    line-height: 2.5rem;
+    min-height: 2.5rem;
+    max-width: 23rem;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    hyphens: auto;
+    color: white;
+    background-color: rgb(45, 37, 53);
+}
+
+.task .done {
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.596);
+}
+
+.task .tools {
+    font-size: 0;
+    line-height: 0;
+}
+
+.task .tools button {
+    padding: 0;
+    border: none;
+}
+
+i {
+    transition: .3s;
+}
+
+/* tools */
+.fa-check:hover {
+    color: forestgreen;
+}
+
+.fa-pen-to-square:hover {
+    color: dodgerblue;
+}
+
+.fa-x:hover {
+    color: brown;
+}
+
+/* pop window*/
+.pop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    min-width: 35rem;
+    height: 25vh;
+    background-color: rgba(23, 16, 31, 0.835);
+    border: 2px white solid;
+    border-radius: 2.5rem;
+}
+
+.pop .input {
+    min-width: 70%;
+    border: 1.5px solid black;
+
+}
+
+.pop i {
+    position: absolute;
+    top: -15%;
+    right: -2%;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.pop button {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+}
+
+div .hidden {
+    display: none;
+}
+
+div .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(8, 2, 14, 0.589);
+}
