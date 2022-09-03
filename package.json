@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/graycrovv/task-list.git"
+    "url": "git+https://github.com/graycrovv/graycrovv.github.io"
   },
   "author": "graycrovv",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/graycrovv/task-list/issues"
+    "url": "https://github.com/graycrovv/graycrovv.github.io/issues"
   },
-  "homepage": "https://github.com/graycrovv/task-list#readme",
+  "homepage": "https://github.com/graycrovv/graycrovv.github.io#readme",
   "devDependencies": {
     "eslint": "^8.23.0"
   }
