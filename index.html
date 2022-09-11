@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toDoList - attempt I</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/bb16009335.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/bb16009335.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <h1>TASK LIST</h1>
-        <div class="frame">
-            <div class="border">
-                <input type="text" class="input" placeholder="What do you need to do?">
-                <button class="add">add task
-                </button>
-                <p class="stop"></p>
-            </div>
-            <ul class="tasks">
-                <div class="backdrop hidden">
-                    <div class="pop hidden">
-                        <i class="fa-solid fa-x"></i>
-                        <input type="text" class="input" placeholder="">
-                        <button class="add second">save!</button>
-                        <p class="stop warning"></p>
-                    </div>
-                </div>
-                <p class="empty"></p>
-                <li class="task">
-                    <p class="paragraph">example task</p>
-                    <div class="tools">
-                        <button class="check"><i class="fa-solid fa-check"></i></button>
-                        <button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button class="delete"><i class="fa-solid fa-x"></i></button>
-                    </div>
-                </li>
-            </ul>
+      <h1>TASK LIST</h1>
+      <div class="frame">
+        <div class="border">
+          <input
+            type="text"
+            class="input"
+            placeholder="What do you need to do?" />
+          <button class="add">add task</button>
+          <p class="stop"></p>
         </div>
+        <ul class="tasks">
+          <div class="backdrop hidden">
+            <div class="pop hidden">
+              <i class="fa-solid fa-x"></i>
+              <input type="text" class="input" placeholder="" />
+              <button class="add second">save!</button>
+              <p class="stop warning"></p>
+            </div>
+          </div>
+          <p class="empty"></p>
+          <li class="task">
+            <p class="paragraph">example task</p>
+            <div class="tools">
+              <button class="check"><i class="fa-solid fa-check"></i></button>
+              <button class="edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="delete"><i class="fa-solid fa-x"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
