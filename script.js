@@ -58,6 +58,7 @@ const addTaskToList = () => {
 
     newTask.classList.add("task"); //adding classes css
     tools2.classList.add("tools");
+    paragraph2.classList.add("paragraph");
 
     completeBtn2.innerHTML = `<i class="fa-solid fa-check"></i>`; //task icons
     editBtn2.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
