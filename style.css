@@ -20,7 +20,7 @@ body {
 }
 h1 {
   padding: 30px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
 }
 /* input section */
@@ -41,6 +41,7 @@ h1 {
   border-radius: 25px;
 }
 .input {
+  margin-top: -10px;
   padding: 4px;
   width: 50%;
   font-size: 1.2rem;
@@ -49,7 +50,7 @@ h1 {
   outline: none;
 }
 .add {
-  margin: 0 1rem;
+  margin: -10px 1rem 0;
   padding: 0 1rem;
   color: white;
   border: 1px white solid;
@@ -75,7 +76,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: rgb(104, 216, 156);
 }
 .tasks {
@@ -146,7 +147,7 @@ i {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   width: 70vw;
@@ -154,10 +155,12 @@ i {
   height: 25vh;
   background-color: rgba(23, 16, 31, 0.835);
   border: 2px white solid;
-  border-radius: 2.5rem;
+  border-radius: 1.5rem;
 }
 .pop .input {
+  height: 3rem;
   min-width: 70%;
+  font-size: 1.2rem;
   border: 1.5px solid black;
 }
 .pop i {
@@ -168,8 +171,12 @@ i {
   color: white;
 }
 .pop button {
+  height: 3rem;
   padding: 0.3rem 0.8rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+}
+.warning {
+  font-size: 2rem;
 }
 div .hidden {
   display: none;
@@ -183,80 +190,160 @@ div .hidden {
   background-color: rgba(8, 2, 14, 0.589);
 }
 
-/* copied from other project */
 /* LANDSCAPE*/
 
-/*@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 767px) and (orientation: landscape) {
+  h1 {
+    padding: 2px;
+    font-size: 1.5rem;
+  }
+  .border {
+    padding: 1rem 0;
+    height: 5rem;
+    border-radius: 20px;
+  }
+  .input {
+    height: 2rem;
+    width: 70%;
+    padding: 4px;
+  }
+  .stop {
+    top: 67%;
+    font-size: 1rem;
+  }
+  .add {
+    font-size: 0.8rem;
+    height: 2rem;
+  }
+  /*tasks*/
+  .tasks {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    min-height: 10rem;
+    border-radius: 20px;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 1.5rem;
+    min-height: 1.5rem;
+    font-size: 1.5rem;
+  }
+  /* pop window*/
+  .pop {
+    top: 55%;
+    width: 92vw;
+    min-width: 15rem;
+    min-height: 7rem;
+    border: 1px white solid;
+    border-radius: 15px;
+  }
+  .warning {
+    margin-top: 7px;
+  }
 }
 
-/*@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
-  .wrap {
-    height: 100vh;
-    max-width: 1023px;
-    overflow: hidden;
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .frame {
+    width: 75vw;
   }
-  .wrap main {
-    height: 55vh;
-  }
-  .intro p {
-    font-size: 4rem;
-    line-height: 60vh;
-  }
-  .title {
+  h1 {
+    padding: 10px;
     font-size: 2.5rem;
   }
-  .screen {
-    margin: 2% 15%;
-    height: 30vh;
-    font-size: 1.4rem;
+  .border {
+    padding: 1.2rem 0;
+    height: 6.5rem;
   }
-  .screen .border {
-    padding: 1rem;
-    box-shadow: 5px 5px 5px gray;
+  .input {
+    height: 2.5rem;
+    width: 70%;
   }
-  .screen div p {
-    line-height: 1.4rem;
-  }
-
-  .start {
-    margin: 0 35% 5% 35%;
-    padding: 1rem 1rem;
-    text-align: center;
+  .stop {
+    top: 67%;
     font-size: 1.2rem;
-    border: 1px white solid;
-    opacity: 1;
+  }
+  .add {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 2rem;
+    min-height: 2rem;
+    font-size: 1.5rem;
+  }
+  .empty {
+    font-size: 1.8rem;
+  }
+  .pop {
+    top: 52%;
+    width: 90vw;
+    min-height: 10rem;
+    border-radius: 15px;
+  }
+  .pop * {
+    height: 2.8rem;
+  }
+  .warning {
+    margin-top: 7px;
+    font-size: 1.5rem;
   }
 }
-
 @media (min-width: 1024px) and (max-width: 1200px) and (orientation: landscape) {
-  .start {
-    margin: -5% 5% 0 65%;
-    padding: 1rem 1rem;
-    text-align: right;
-    font-size: 1.4rem;
-    border: 1px white solid;
-    opacity: 1;
+  .frame {
+    width: 75vw;
   }
-}
-
-@media (min-width: 1024px) and (max-height: 500px) and (orientation: landscape) {
-  .wrap {
-    min-height: 500px;
+  h1 {
+    padding: 10px;
+    font-size: 3.5rem;
   }
-
-  .wrap main {
-    margin-top: -10%;
+  .border {
+    align-items: flex-end;
+    padding: 5rem 0;
   }
-  .start {
+  .input {
+    height: 3rem;
+    width: 70%;
+    font-size: 1.8rem;
+  }
+  .stop {
+    top: 64%;
+    font-size: 1.8rem;
+  }
+  .add {
+    font-size: 1rem;
+    height: 3rem;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 2.2rem;
+    min-height: 2.2rem;
+    font-size: 1.8rem;
+  }
+  .tools {
+    margin: 0 5px;
+    max-width: 35%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .empty {
+    font-size: 2.2rem;
+  }
+  .pop {
+    top: 52%;
+    width: 87vw;
+    min-height: 10rem;
+    border-radius: 15px;
+  }
+  .pop * {
+    height: 3rem;
+  }
+  .warning {
+    margin-top: 9px;
     font-size: 2rem;
-    opacity: 1;
   }
 }
-@media (min-width: 1280px) and (max-height: 950px) and (orientation: landscape) {
-  .start {
-    opacity: 1;
-  }
-}
+
 /*PORTRAIT*/
 
 @media (max-width: 540px) and (orientation: portrait) {
@@ -338,8 +425,14 @@ div .hidden {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 80vw;
+    max-height: 20vh;
+    width: 82vw;
     min-width: 10rem;
+  }
+  .pop input,
+  .pop button {
+    height: 1.8rem;
+    font-size: 1rem;
   }
   .warning {
     width: 50%;
