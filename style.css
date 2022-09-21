@@ -1,223 +1,532 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
 }
-
-
-
 body {
-    font-size: 10px;
-    background-color: rgb(23, 19, 27);
+  width: 100vw;
+  font-size: 10px;
+  background-color: rgb(23, 19, 27);
 }
-
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    min-width: 30rem;
-    background-color: rgb(23, 19, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  min-width: 30rem;
+  background-color: rgb(23, 19, 27);
 }
-
 h1 {
-    padding: 30px;
-    font-size: 3rem;
-    color: white;
+  padding: 30px;
+  font-size: 4rem;
+  color: white;
 }
-
-
 /* input section */
 .frame {
-    margin: .5rem 2rem;
-    width: 60vw;
-    min-width: 30rem;
-    background-color: rgb(23, 19, 27);
+  margin: 0.5rem 2rem;
+  width: 60vw;
+  min-width: 30rem;
+  background-color: rgb(23, 19, 27);
 }
-
 .border {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 3rem 0;
-    height: 8rem;
-    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
-    border-radius: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem 0;
+  height: 8rem;
+  box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
+  border-radius: 25px;
 }
-
 .input {
-    padding: 4px;
-    width: 50%;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    border: 2px white solid;
-    outline: none;
+  margin-top: -10px;
+  padding: 4px;
+  width: 50%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px white solid;
+  outline: none;
 }
-
 .add {
-    margin: 0 1rem;
-    padding: 0 1rem;
-    color: white;
-    border: 1px white solid;
-    background-color: transparent;
-    border-radius: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: .3s;
+  margin: -10px 1rem 0;
+  padding: 0 1rem;
+  color: white;
+  border: 1px white solid;
+  background-color: transparent;
+  border-radius: 7px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
-
-.add:hover {
-    color: rgb(23, 19, 27);
-    background-color: white;
-}
-
 .stop {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    font-size: 1.2rem;
-    color: rgb(182, 86, 86);
-
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: 1.2rem;
+  color: rgb(182, 86, 86);
 }
-
 /* tasks section */
 .empty {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: 1.8rem;
+  color: rgb(104, 216, 156);
+}
+.tasks {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  min-height: 20rem;
+  box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
+  border-radius: 25px;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 5px 10px;
+  min-height: 1rem;
+  width: 90%;
+  color: white;
+  background-color: rgb(45, 37, 53);
+  border-radius: 5px;
+}
+.hidden {
+  display: none;
+}
+.task * {
+  padding: 0 1rem;
+  line-height: 2.5rem;
+  min-height: 2.5rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  hyphens: auto;
+  color: white;
+  background-color: rgb(45, 37, 53);
+}
+.paragraph {
+  max-width: 65%;
+}
+.done {
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.596);
+}
+.tools {
+  margin: 0 5px;
+  padding: 0;
+  max-width: 35%;
+  font-size: 0;
+  line-height: 0;
+}
+.tools button {
+  padding: 0;
+  border: none;
+}
+i {
+  transition: 0.3s;
+}
+/* pop window*/
+.pop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  min-width: 35rem;
+  height: 25vh;
+  background-color: rgba(23, 16, 31, 0.835);
+  border: 2px white solid;
+  border-radius: 1.5rem;
+}
+.pop .input {
+  height: 3rem;
+  min-width: 70%;
+  font-size: 1.2rem;
+  border: 1.5px solid black;
+}
+.pop i {
+  position: absolute;
+  top: -15%;
+  right: -2%;
+  font-size: 1.2rem;
+  color: white;
+}
+.pop button {
+  height: 3rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 1.2rem;
+}
+.warning {
+  font-size: 2rem;
+}
+div .hidden {
+  display: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150vw;
+  height: 150vh;
+  background-color: rgba(8, 2, 14, 0.589);
+}
+
+/* LANDSCAPE*/
+
+@media (max-width: 767px) and (orientation: landscape) {
+  h1 {
+    padding: 2px;
+    font-size: 1.5rem;
+  }
+  .border {
+    padding: 1rem 0;
+    height: 5rem;
+    border-radius: 20px;
+  }
+  .input {
+    height: 2rem;
+    width: 70%;
+    padding: 4px;
+  }
+  .stop {
+    top: 67%;
+    font-size: 1rem;
+  }
+  .add {
+    font-size: 0.8rem;
+    height: 2rem;
+  }
+  /*tasks*/
+  .tasks {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    min-height: 10rem;
+    border-radius: 20px;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 1.5rem;
+    min-height: 1.5rem;
+    font-size: 1.5rem;
+  }
+  /* pop window*/
+  .pop {
+    top: 55%;
+    width: 92vw;
+    min-width: 15rem;
+    min-height: 7rem;
+    border: 1px white solid;
+    border-radius: 15px;
+  }
+  .warning {
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .frame {
+    width: 75vw;
+  }
+  h1 {
+    padding: 10px;
+    font-size: 2.5rem;
+  }
+  .border {
+    padding: 1.2rem 0;
+    height: 6.5rem;
+  }
+  .input {
+    height: 2.5rem;
+    width: 70%;
+  }
+  .stop {
+    top: 67%;
+    font-size: 1.2rem;
+  }
+  .add {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 2rem;
+    min-height: 2rem;
+    font-size: 1.5rem;
+  }
+  .empty {
+    font-size: 1.8rem;
+  }
+  .pop {
+    top: 52%;
+    width: 90vw;
+    min-height: 10rem;
+    border-radius: 15px;
+  }
+  .pop * {
+    height: 2.8rem;
+  }
+  .warning {
+    margin-top: 7px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) and (orientation: landscape) {
+  .frame {
+    width: 75vw;
+  }
+  h1 {
+    padding: 10px;
+    font-size: 3.5rem;
+  }
+  .border {
+    align-items: flex-end;
+    padding: 5rem 0;
+  }
+  .input {
+    height: 3rem;
+    width: 70%;
+    font-size: 1.8rem;
+  }
+  .stop {
+    top: 64%;
+    font-size: 1.8rem;
+  }
+  .add {
+    font-size: 1rem;
+    height: 3rem;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    line-height: 2.2rem;
+    min-height: 2.2rem;
+    font-size: 1.8rem;
+  }
+  .tools {
+    margin: 0 5px;
+    max-width: 35%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .empty {
+    font-size: 2.2rem;
+  }
+  .pop {
+    top: 52%;
+    width: 87vw;
+    min-height: 10rem;
+    border-radius: 15px;
+  }
+  .pop * {
+    height: 3rem;
+  }
+  .warning {
+    margin-top: 9px;
+    font-size: 2rem;
+  }
+}
+
+/*PORTRAIT*/
+
+@media (max-width: 540px) and (orientation: portrait) {
+  .wrapper {
+    min-width: 20rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .frame {
+    margin: 0 0;
+    min-width: 90%;
+    height: 100vh;
+  }
+  .border {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    min-height: 20%;
+  }
+  .input {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px;
+  }
+  .add {
+    margin: 0 5%;
+    padding: 0.5rem 1rem;
+  }
+  .stop {
+    width: 50%;
+    top: 63%;
+    left: 63%;
+    font-size: 1rem;
+  }
+  /* tasks section  */
+  .tasks {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    min-height: 17rem;
+  }
+
+  .task {
+    margin: 0.5rem 0;
+    justify-content: space-between;
+    width: 95%;
+  }
+  .task * {
+    padding: 0 0.5rem;
+    min-height: 1.7rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.6px;
+  }
+  .paragraph {
+    max-width: 75%;
+  }
+  .done {
+    font-size: 1rem;
+  }
+  .tools {
+    max-width: 15%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .tools button {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  /* pop window*/
+  .pop {
+    top: 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-height: 20vh;
+    width: 82vw;
+    min-width: 10rem;
+  }
+  .pop input,
+  .pop button {
+    height: 1.8rem;
+    font-size: 1rem;
+  }
+  .warning {
+    width: 50%;
+    top: 58%;
+  }
+}
+@media (min-width: 541px) and (max-width: 1024px) and (orientation: portrait) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  .frame {
+    min-width: 75%;
+  }
+  .border {
+    padding: 2.5rem 2rem;
+    height: 8rem;
+  }
+  .input {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 1px;
+  }
+  .add {
+    width: 20%;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+  }
+  .stop {
     position: absolute;
+    top: 75%;
+  }
+  /* tasks section  */
+  .empty {
+    font-size: 2rem;
+  }
+  .tasks {
+    margin: 3.5rem 0;
+    padding: 2rem 0;
+  }
+  .task {
+    margin: 0.3rem 0;
+    width: 90%;
+  }
+  .task * {
+    padding: 0.5rem 0.5rem;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.6px;
+  }
+  .done {
+    font-size: 1rem;
+  }
+  .tools {
+    padding: 0 0.3rem;
+    max-width: 25%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .tools button {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  /* pop window*/
+  .pop {
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
-    font-size: 1.5rem;
-    color: rgb(104, 216, 156);
-}
-
-
-.tasks {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    margin: 2rem 0;
-    padding: 2rem 0;
-    min-height: 20rem;
-    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.623);
-    border-radius: 25px;
-}
-
-.task {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px 0;
-    min-height: 1rem;
-    width: 90%;
-    color: white;
-    background-color: rgb(45, 37, 53);
-}
-
-.hidden {
-    display: none;
-}
-
-.task * {
-    padding: 0 1rem;
-    line-height: 2.5rem;
-    min-height: 2.5rem;
-    max-width: 23rem;
-    font-size: 1.5rem;
-    word-wrap: break-word;
-    hyphens: auto;
-    color: white;
-    background-color: rgb(45, 37, 53);
-}
-
-.task .done {
-    font-size: 1.4rem;
-    text-decoration: line-through;
-    color: rgba(255, 255, 255, 0.596);
-}
-
-.task .tools {
-    font-size: 0;
-    line-height: 0;
-}
-
-.task .tools button {
-    padding: 0;
-    border: none;
-}
-
-i {
-    transition: .3s;
-}
-
-/* tools */
-.fa-check:hover {
-    color: forestgreen;
-}
-
-.fa-pen-to-square:hover {
-    color: dodgerblue;
-}
-
-.fa-x:hover {
-    color: brown;
-}
-
-/* pop window*/
-.pop {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70vw;
-    min-width: 35rem;
-    height: 25vh;
-    background-color: rgba(23, 16, 31, 0.835);
-    border: 2px white solid;
-    border-radius: 2.5rem;
-}
-
-.pop .input {
-    min-width: 70%;
-    border: 1.5px solid black;
-
-}
-
-.pop i {
-    position: absolute;
-    top: -15%;
-    right: -2%;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.pop button {
-    padding: .3rem .8rem;
+    width: 80vw;
+    height: 15vh;
+  }
+  .pop .input {
+    height: 30%;
+    width: 70%;
+  }
+  .pop button {
+    height: 30%;
     font-size: 1rem;
+  }
 }
-
-div .hidden {
-    display: none;
-}
-
-div .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(8, 2, 14, 0.589);
+@media (hover: hover) {
+  /* tools */
+  .fa-check:hover {
+    color: forestgreen;
+  }
+  .fa-pen-to-square:hover {
+    color: dodgerblue;
+  }
+  .fa-x:hover {
+    color: brown;
+  }
+  .add:hover {
+    color: rgb(23, 19, 27);
+    background-color: white;
+  }
 }

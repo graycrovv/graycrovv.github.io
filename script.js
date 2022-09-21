@@ -38,6 +38,13 @@ const enterCheck2 = (e) => {
   }
 };
 
+const removeTXT = (e) => {
+  emptyTXT.textContent = "";
+};
+const removeTXT2 = (e) => {
+  emptyPopUpTXT.textContent = "";
+};
+
 const addTaskToList = () => {
   taskTXT = input.value;
   emptyTXT.textContent = ""; //clean 'enter the task...'
@@ -58,6 +65,7 @@ const addTaskToList = () => {
 
     newTask.classList.add("task"); //adding classes css
     tools2.classList.add("tools");
+    paragraph2.classList.add("paragraph");
 
     completeBtn2.innerHTML = `<i class="fa-solid fa-check"></i>`; //task icons
     editBtn2.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
@@ -112,7 +120,9 @@ const closePopWindow = () => {
 
 document.body.addEventListener("click", firstCheck);
 input.addEventListener("keypress", enterCheck);
+input.addEventListener("input", removeTXT);
 inputPopUp.addEventListener("keypress", enterCheck2);
+inputPopUp.addEventListener("input", removeTXT2);
 
 //listeners for already existing buttons
 submitBtn.addEventListener("click", addTaskToList);
