@@ -426,13 +426,15 @@ div .hidden {
     align-items: flex-start;
     justify-content: space-evenly;
     max-height: 20vh;
-    width: 82vw;
+    width: 84vw;
     min-width: 10rem;
   }
+
   .pop input,
-  .pop button {
+  .pop .add {
     height: 1.8rem;
     font-size: 1rem;
+    line-height: 0.8rem;
   }
   .warning {
     width: 50%;
